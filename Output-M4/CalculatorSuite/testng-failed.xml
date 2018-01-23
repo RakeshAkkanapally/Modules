@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" verbose="2" name="Failed suite [CalculatorSuite]">
+  <listeners>
+    <listener class-name="com.M4.TestListener"/>
+  </listeners>
+  <test verbose="2" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Sanity"/>
+        <include name="Smoke"/>
+        <include name="Negative"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.M4.NewTest">
+        <methods>
+          <include name="squareRootOfNegativeNumber"/>
+          <include name="addingTwoPositiveNumbers"/>
+          <include name="cosine"/>
+          <include name="subtractingTwoNumbers"/>
+        </methods>
+      </class> <!-- com.M4.NewTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [CalculatorSuite] -->

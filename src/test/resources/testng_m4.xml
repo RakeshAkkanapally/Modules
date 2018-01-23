@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CalculatorSuite"  parallel="methods"  thread-count="4" verbose="2">
+ 
+  <test name="Test">
+       <listeners>
+      	<listener class-name = "com.M4.TestListener" />
+   	  </listeners> 
+      <groups>
+          <run>
+              <include name="Sanity"/>
+              <include name="Smoke"/>
+              <include name="Negative"/>
+          </run> 
+      </groups>
+    <classes>
+      <class name="com.M4.NewTest" />
+    </classes>
+  </test>
+</suite>
