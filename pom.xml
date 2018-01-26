@@ -25,5 +25,11 @@
 		<type>jar</type>
 		<version>21.0</version>
 	</dependency>
+	<dependency>
+		<groupId>io.rest-assured</groupId>
+		<artifactId>rest-assured</artifactId>
+		<version>3.0.6</version>
+		<scope>test</scope>
+	</dependency>
   </dependencies>
 </project>
