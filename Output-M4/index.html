@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -146,12 +146,12 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CalculatorSuite" title="com.M4.NewTest" hash-for-method="multiplyingNumbers(-5, 0, 0)">multiplyingNumbers(-5, 0, 0)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-CalculatorSuite" title="com.M4.NewTest" hash-for-method="multiplyingNumbers(10, 20, 200)">multiplyingNumbers(10, 20, 200)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CalculatorSuite" title="com.M4.NewTest" hash-for-method="multiplyingNumbers(10, 20, 200)">multiplyingNumbers(10, 20, 200)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-CalculatorSuite" title="com.M4.NewTest" hash-for-method="multiplyingNumbers(-5, 0, 0)">multiplyingNumbers(-5, 0, 0)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -193,35 +193,25 @@
                   </a> <!-- cosine -->
                   <span class="method-name">cosine</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [1.0] but found [0.0]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
 	at com.M4.NewTest.cosine(NewTest.java:128)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at com.M4.RunProgrammatically.main(RunProgrammatically.java:22)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -231,42 +221,26 @@
                   <a name="squareRootOfNegativeNumber">
                   </a> <!-- squareRootOfNegativeNumber -->
                   <span class="method-name">squareRootOfNegativeNumber</span>
-                  <div class="stack-trace">org.testng.TestException: 
-Expected exception of type class java.lang.NumberFormatException but got java.lang.AssertionError: expected [2.23606797749979] but found [5.0]
-	at org.testng.internal.ExpectedExceptionsHolder.wrongException(ExpectedExceptionsHolder.java:68)
-	at org.testng.internal.Invoker.considerExceptions(Invoker.java:1120)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:603)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.runSuites(TestNG.java:1028)
-	at org.testng.TestNG.run(TestNG.java:996)
-	at com.M4.RunProgrammatically.main(RunProgrammatically.java:22)
-Caused by: java.lang.AssertionError: expected [2.23606797749979] but found [5.0]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:442)
+                  <div class="stack-trace">java.lang.AssertionError: expected [2.23606797749979] but found [5.0]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:179)
 	at com.M4.NewTest.squareRootOfNegativeNumber(NewTest.java:119)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
-	... 17 more
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -316,18 +290,18 @@ Caused by: java.lang.AssertionError: expected [2.23606797749979] but found [5.0]
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="multiplyingNumbers(-5, 0, 0)">
-                  </a> <!-- multiplyingNumbers(-5, 0, 0) -->
-                  <span class="method-name">multiplyingNumbers</span>
-                  <span class="parameters">(-5, 0, 0)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="multiplyingNumbers(10, 20, 200)">
                   </a> <!-- multiplyingNumbers(10, 20, 200) -->
                   <span class="method-name">multiplyingNumbers</span>
                   <span class="parameters">(10, 20, 200)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="multiplyingNumbers(-5, 0, 0)">
+                  </a> <!-- multiplyingNumbers(-5, 0, 0) -->
+                  <span class="method-name">multiplyingNumbers</span>
+                  <span class="parameters">(-5, 0, 0)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -364,11 +338,11 @@ Caused by: java.lang.AssertionError: expected [2.23606797749979] but found [5.0]
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;-1&quot; verbose=&quot;2&quot; name=&quot;CalculatorSuite&quot;&gt;
+&lt;suite thread-count=&quot;4&quot; verbose=&quot;2&quot; name=&quot;CalculatorSuite&quot; parallel=&quot;methods&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.M4.TestListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Test&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;Sanity&quot;/&gt;
@@ -463,39 +437,39 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addingTwoPositiveNumbers')
+data.setCell(0, 1, 'subtractingTwoNumbers')
 data.setCell(0, 2, 'com.M4.NewTest')
-data.setCell(0, 3, 16);
+data.setCell(0, 3, 32);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'isPositive')
+data.setCell(1, 1, 'addingTwoPositiveNumbers')
 data.setCell(1, 2, 'com.M4.NewTest')
-data.setCell(1, 3, 0);
+data.setCell(1, 3, 32);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'multiplyingNumbers')
+data.setCell(2, 1, 'squareRootOfNegativeNumber')
 data.setCell(2, 2, 'com.M4.NewTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 16);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'multiplyingNumbers')
+data.setCell(3, 1, 'cosine')
 data.setCell(3, 2, 'com.M4.NewTest')
-data.setCell(3, 3, 0);
+data.setCell(3, 3, 16);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'divideByZero')
+data.setCell(4, 1, 'isNegative')
 data.setCell(4, 2, 'com.M4.NewTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'multiplyingNumbers')
+data.setCell(5, 1, 'divideByZero')
 data.setCell(5, 2, 'com.M4.NewTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'divideZerobyANumber')
+data.setCell(6, 1, 'multiplyingNumbers')
 data.setCell(6, 2, 'com.M4.NewTest')
 data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'subtractingTwoNumbers')
+data.setCell(7, 1, 'multiplyingNumbers')
 data.setCell(7, 2, 'com.M4.NewTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'isNegative')
+data.setCell(8, 1, 'isPositive')
 data.setCell(8, 2, 'com.M4.NewTest')
 data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
@@ -503,18 +477,18 @@ data.setCell(9, 1, 'multiplyingNumbers')
 data.setCell(9, 2, 'com.M4.NewTest')
 data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'cosine')
+data.setCell(10, 1, 'divideZerobyANumber')
 data.setCell(10, 2, 'com.M4.NewTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'squareRootOfNegativeNumber')
+data.setCell(11, 1, 'multiplyingNumbers')
 data.setCell(11, 2, 'com.M4.NewTest')
 data.setCell(11, 3, 0);
 window.suiteTableData['CalculatorSuite']= { tableData: data, tableDiv: 'times-div-CalculatorSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 ms</span>
+              <span class="suite-total-time">Total running time: 96 ms</span>
               <div id="times-div-CalculatorSuite">
               </div> <!-- times-div-CalculatorSuite -->
             </div> <!-- times-div -->
@@ -526,97 +500,85 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">isPositive</span>
+              <span class="reporter-method-name">isNegative</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: isPositive</span>
-                <span class="reporter-method-output">a:-1	 IsPositive:false</span>
-                <span class="reporter-method-output">Test Method Passed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">multiplyingNumbers(-5, 0, 0)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: multiplyingNumbers</span>
-                <span class="reporter-method-output">a:-5	 b:0	 product:0</span>
-                <span class="reporter-method-output">Test Method Passed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">multiplyingNumbers(10, 20, 200)</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: multiplyingNumbers</span>
-                <span class="reporter-method-output">a:10	 b:20	 product:200</span>
+                <span class="reporter-method-output">a:1	 IsNegative:false</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">divideByZero</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: divideByZero</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">multiplyingNumbers(0, 5, 0)</span>
+              <span class="reporter-method-name">multiplyingNumbers(10, 20, 200)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: multiplyingNumbers</span>
-                <span class="reporter-method-output">a:0	 b:5	 product:0</span>
+                <span class="reporter-method-output">a:10	 b:20	 product:200</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">divideZerobyANumber</span>
+              <span class="reporter-method-name">multiplyingNumbers(-5, 0, 0)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: divideZerobyANumber</span>
-                <span class="reporter-method-output">a:0	 b:1	 quotient:0</span>
-                <span class="reporter-method-output">Test Method Passed</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">addingTwoPositiveNumbers</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: addingTwoPositiveNumbers</span>
-                <span class="reporter-method-output">a:10	 b:20	 sum:30</span>
+                <span class="reporter-method-output">a:-5	 b:0	 product:0</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">subtractingTwoNumbers</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: subtractingTwoNumbers</span>
                 <span class="reporter-method-output">a:10	 b:20	 diff:-10</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">isNegative</span>
+              <span class="reporter-method-name">isPositive</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: isNegative</span>
-                <span class="reporter-method-output">a:1	 IsNegative:false</span>
+                <span class="reporter-method-output">a:-1	 IsPositive:false</span>
+                <span class="reporter-method-output">Test Method Passed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">multiplyingNumbers(0, 5, 0)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">a:0	 b:5	 product:0</span>
+                <span class="reporter-method-output">Test Method Passed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">addingTwoPositiveNumbers</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">a:10	 b:20	 sum:30</span>
+                <span class="reporter-method-output">Test Method Passed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">divideZerobyANumber</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">a:0	 b:1	 quotient:0</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
               <span class="reporter-method-name">multiplyingNumbers(20, 10, 200)</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: multiplyingNumbers</span>
                 <span class="reporter-method-output">a:20	 b:10	 product:200</span>
                 <span class="reporter-method-output">Test Method Passed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">cosine</span>
+              <span class="reporter-method-name">squareRootOfNegativeNumber</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: cosine</span>
-                <span class="reporter-method-output">a:0	 cos:0.0</span>
+                <span class="reporter-method-output">a:-25	 SquareRoot:5.0</span>
                 <span class="reporter-method-output">Test Method Failed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
             <div class="reporter-method-div">
-              <span class="reporter-method-name">squareRootOfNegativeNumber</span>
+              <span class="reporter-method-name">cosine</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Method started: squareRootOfNegativeNumber</span>
-                <span class="reporter-method-output">a:-25	 SquareRoot:5.0</span>
+                <span class="reporter-method-output">a:0	 cos:0.0</span>
                 <span class="reporter-method-output">Test Method Failed</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
@@ -655,44 +617,28 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">subtractingTwoNumbers</span>
-                <span class="method-start">31 ms</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">divideByZero</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isNegative</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">divideZerobyANumber</span>
+                <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">isPositive</span>
+                <span class="method-start">47 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">cosine</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">divideByZero</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">divideZerobyANumber</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">isNegative</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">isPositive</span>
-                <span class="method-start">31 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">multiplyingNumbers(10, 20, 200)</span>
-                <span class="method-start">47 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">multiplyingNumbers(20, 10, 200)</span>
-                <span class="method-start">47 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">multiplyingNumbers(0, 5, 0)</span>
-                <span class="method-start">47 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">multiplyingNumbers(-5, 0, 0)</span>
                 <span class="method-start">47 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
@@ -700,6 +646,22 @@ return data;
                 </img>
                 <span class="method-name">squareRootOfNegativeNumber</span>
                 <span class="method-start">47 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">multiplyingNumbers(10, 20, 200)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">multiplyingNumbers(20, 10, 200)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">multiplyingNumbers(0, 5, 0)</span>
+                <span class="method-start">79 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">multiplyingNumbers(-5, 0, 0)</span>
+                <span class="method-start">79 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
