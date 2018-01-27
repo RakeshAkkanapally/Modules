@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1517033178290" stop="1517033230331" version="1.4.23" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ebay</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1517033178320" stop="1517033199856" status="passed">
+            <name>Search and Add to Cart</name>
+            <title>Search and Add to Cart</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1517033178351" stop="1517033182438" status="passed">
+                    <name>Given User launch the website "https://www.ebay.com/"</name>
+                    <title>Given User launch the website "https://www.ebay.com/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517033182450" stop="1517033188303" status="passed">
+                    <name>Given User search for an item "nokia 3310 red"</name>
+                    <title>Given User search for an item "nokia 3310 red"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517033188307" stop="1517033195075" status="passed">
+                    <name>When User selects the First Item listed</name>
+                    <title>When User selects the First Item listed</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517033195075" stop="1517033199756" status="passed">
+                    <name>Then User adds the item to cart</name>
+                    <title>Then User adds the item to cart</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517033199760" stop="1517033199856" status="passed">
+                    <name>And Verify Item is succesfully added to cart</name>
+                    <title>And Verify Item is succesfully added to cart</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search and Add to Cart"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="4272@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1517033199978" stop="1517033217750" status="broken">
+            <name>Search and Add multiple Items to Cart</name>
+            <title>Search and Add multiple Items to Cart</title>
+            <description type="text"></description>
+            <failure>
+                <message>NullPointerException: null</message>
+                <stack-trace>java.lang.NullPointerException
+	at com.M63.pageObjects.ShoppingCartPage.ClickOnAddToCart(ShoppingCartPage.java:39)
+	at com.M63.steps.BaseStepDef.addFirstListedItem(BaseStepDef.java:57)
+	at ✽.Then User adds the item with "Silver" color and "16GB" Ram to cart(ebay.feature:19)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1517033199978" stop="1517033202264" status="passed">
+                    <name>Given User launch the website "https://www.ebay.com/"</name>
+                    <title>Given User launch the website "https://www.ebay.com/"</title>
+                </step>
+                <step start="1517033202268" stop="1517033207988" status="passed">
+                    <name>Given User search for an item "IPhone 6"</name>
+                    <title>Given User search for an item "IPhone 6"</title>
+                </step>
+                <step start="1517033207992" stop="1517033217474" status="passed">
+                    <name>When User selects the First Item listed</name>
+                    <title>When User selects the First Item listed</title>
+                </step>
+                <step start="1517033217474" stop="1517033217734" status="broken">
+                    <name>Then User adds the item with "Silver" color and "16GB" Ram to cart</name>
+                    <title>Then User adds the item with "Silver" color and "16GB" Ram to cart</title>
+                </step>
+                <step start="1517033217734" stop="1517033217746" status="canceled">
+                    <name>And Verify Item is succesfully added to cart</name>
+                    <title>And Verify Item is succesfully added to cart</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search and Add multiple Items to Cart"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="4272@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1517033217750" stop="1517033230327" status="broken">
+            <name>Search and Add multiple Items to Cart</name>
+            <title>Search and Add multiple Items to Cart</title>
+            <description type="text"></description>
+            <failure>
+                <message>NullPointerException: null</message>
+                <stack-trace>java.lang.NullPointerException
+	at com.M63.pageObjects.ShoppingCartPage.ClickOnAddToCart(ShoppingCartPage.java:39)
+	at com.M63.steps.BaseStepDef.addFirstListedItem(BaseStepDef.java:57)
+	at ✽.Then User adds the item with "Black" color and "128GB" Ram to cart(ebay.feature:19)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1517033217754" stop="1517033220181" status="passed">
+                    <name>Given User launch the website "https://www.ebay.com/"</name>
+                    <title>Given User launch the website "https://www.ebay.com/"</title>
+                </step>
+                <step start="1517033220185" stop="1517033224598" status="passed">
+                    <name>Given User search for an item "Iphone 7"</name>
+                    <title>Given User search for an item "Iphone 7"</title>
+                </step>
+                <step start="1517033224598" stop="1517033229855" status="passed">
+                    <name>When User selects the First Item listed</name>
+                    <title>When User selects the First Item listed</title>
+                </step>
+                <step start="1517033229855" stop="1517033230323" status="broken">
+                    <name>Then User adds the item with "Black" color and "128GB" Ram to cart</name>
+                    <title>Then User adds the item with "Black" color and "128GB" Ram to cart</title>
+                </step>
+                <step start="1517033230323" stop="1517033230327" status="canceled">
+                    <name>And Verify Item is succesfully added to cart</name>
+                    <title>And Verify Item is succesfully added to cart</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search and Add multiple Items to Cart"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="4272@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="ebay"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -56,7 +56,7 @@ public class SearchResultPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public SearchResultPage isFlightDisplayed(WebDriver driver) {
+	public SearchResultPage isFlightDisplayed() {
 		boolean FlightDisplayed= (new WebDriverWait(driver, 10)).until(
 				 new ExpectedCondition<Boolean>(){
 					 public Boolean apply(WebDriver d){
@@ -70,10 +70,10 @@ public class SearchResultPage {
 				 }
 		 );
 		
-		return SearchResultPage;
+		return this;
 	}
 
-	public String StartResultDateText(WebDriver driver) {
+	public String StartResultDateText() {
 		StartResultDateElement = (new WebDriverWait(driver,10)).until(
 				 new ExpectedCondition<WebElement>() {
 					public WebElement apply(WebDriver d) {
@@ -83,13 +83,13 @@ public class SearchResultPage {
 		 return StartResultDateElement.getText();		
 	}
 
-	public String EndResultDateText(WebDriver driver) {
+	public String EndResultDateText() {
 		 EndResultDateElement = (new WebDriverWait(driver,10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='slide active']/div/div[@class='date'])[2]")));
 
 		return EndResultDateElement.getText();
 	}
 
-	public SearchResultPage PrintFlightDetails(WebDriver driver) {
+	public SearchResultPage PrintFlightDetails() {
 		 if(Flights.size()>=1){
 			 ListIterator<WebElement> itr1 = Departure_StartTime.listIterator();
 			 ListIterator<WebElement> itr2 = Departure_EndTime.listIterator();
@@ -126,7 +126,7 @@ public class SearchResultPage {
 		 }else{
 			 System.out.println("No Return Flights Available");
 		 }
-		return SearchResultPage;		
+		return this;		
 	}
 	
 	

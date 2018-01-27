@@ -59,7 +59,7 @@ public class HomePage {
 	private WebElement SearchButton;
 
 	
-public HomePage SelectFrom(WebDriver driver,final String Country){
+public HomePage SelectFrom(final String Country){
 	  System.out.println("Selecting Country.."+Country);
 	From.click();
 	((JavascriptExecutor)driver).executeScript("window.scrollBy(0,250)");
@@ -71,11 +71,11 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 			});
 	  FromCountry.click();
 	  	
-	return HomePage;
+	return this;
 	
 }
 	
-	public HomePage SelectFromAirport(WebDriver driver, final String Airport){
+	public HomePage SelectFromAirport(final String Airport){
 		System.out.println("Selecting Airport:"+Airport);
 		WebElement FromAirport=(new WebDriverWait(driver, 10)).until(
 				  new ExpectedCondition<WebElement>() {
@@ -84,14 +84,14 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 					}
 				});
 		  FromAirport.click();	
-		  return HomePage;
+		  return this;
 	}
 	
-	public String getSelectedFromValue(WebDriver driver){
+	public String getSelectedFromValue(){
 		return From.getAttribute("value");
 	}
 	
-	public HomePage SelectToCountry(WebDriver driver,final String Country){
+	public HomePage SelectToCountry(final String Country){
 		System.out.println("Selecting To Country:"+Country);
 		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,250)");
 		ToCountry=(new WebDriverWait(driver, 10)).until(
@@ -101,11 +101,11 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 					}
 				});	 
 		ToCountry.click();
-		return HomePage;
+		return this;
 		
 	}
 	
-	public HomePage SelectToAirport(WebDriver driver,final String Airport){
+	public HomePage SelectToAirport(final String Airport){
 		System.out.println("Selecting To Airport:"+Airport);
 		ToAirport=(new WebDriverWait(driver, 10)).until(
 				  new ExpectedCondition<WebElement>() {
@@ -114,16 +114,16 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 					}
 				});
 		  ToAirport.click();
-		return HomePage;
+		return this;
 		
 	}
 	
-	public String getSelectedToValue(WebDriver driver){
+	public String getSelectedToValue(){
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.textToBePresentInElementValue(To, "Manchester"));
 	  return To.getAttribute("value");
 	}
 	
-	public HomePage SelectFromCalendar(WebDriver driver,String StartDate, String startMonth){
+	public HomePage SelectFromCalendar(String StartDate, String startMonth){
 		  
 		  System.out.println("Selecting..."+StartDate+"-"+startMonth);
 		  int i=1;
@@ -138,7 +138,7 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 				if((str.substring(0,1).equals("0")?str.substring(1):str).equals(StartDate))
 				{
 					day.click();
-					return HomePage;
+					return this;
 				}
 			 }
 		  }
@@ -148,10 +148,10 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 		  }
 	  }
 		  
-			 return HomePage;
+			 return this;
 	  }
 	
-	public HomePage AddTeen(WebDriver driver){
+	public HomePage AddTeen(){
 		AddPassengersDropdown.click();
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
 			       .withTimeout(30, TimeUnit.SECONDS)
@@ -162,10 +162,10 @@ public HomePage SelectFrom(WebDriver driver,final String Country){
 			       return driver.findElement(By.xpath("(//*[@icon-id='glyphs.plus-circle'])[2]/.."));
 			     }});
 		TeenPlusButton.click();
-		return HomePage;
+		return this;
 	}
 
-	public SearchResultPage Search(WebDriver driver) {
+	public SearchResultPage Search() {
 		SearchButton.click();
 		return new SearchResultPage(driver);		
 	}

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="FlightTest" duration-ms="8023" started-at="2018-01-26T13:43:01Z" finished-at="2018-01-26T13:43:09Z">
+  <suite name="FlightTest" duration-ms="51408" started-at="2018-01-27T07:06:27Z" finished-at="2018-01-27T07:07:18Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="8023" started-at="2018-01-26T13:43:01Z" finished-at="2018-01-26T13:43:09Z">
-      <class name="com.M61.NewTest">
-        <test-method status="PASS" signature="TestResponseContent()[pri:0, instance:com.M61.NewTest@3532ec19]" name="TestResponseContent" duration-ms="6105" started-at="2018-01-26T19:13:01Z" finished-at="2018-01-26T19:13:07Z">
+    <test name="Test" duration-ms="51408" started-at="2018-01-27T07:06:27Z" finished-at="2018-01-27T07:07:18Z">
+      <class name="com.M52.Test.NewTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.M52.Test.NewTest@271053e1]" name="beforeClass" is-config="true" duration-ms="4119" started-at="2018-01-27T12:36:27Z" finished-at="2018-01-27T12:36:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestResponseContent -->
-        <test-method status="PASS" signature="TestResponseHeader()[pri:0, instance:com.M61.NewTest@3532ec19]" name="TestResponseHeader" duration-ms="969" started-at="2018-01-26T19:13:07Z" finished-at="2018-01-26T19:13:08Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="Flight()[pri:0, instance:com.M52.Test.NewTest@271053e1]" name="Flight" duration-ms="41870" started-at="2018-01-27T12:36:31Z" finished-at="2018-01-27T12:37:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestResponseHeader -->
-        <test-method status="PASS" signature="TestUsers()[pri:0, instance:com.M61.NewTest@3532ec19]" name="TestUsers" duration-ms="909" started-at="2018-01-26T19:13:08Z" finished-at="2018-01-26T19:13:09Z">
+        </test-method> <!-- Flight -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.M52.Test.NewTest@271053e1]" name="afterTest" is-config="true" duration-ms="5375" started-at="2018-01-27T12:37:13Z" finished-at="2018-01-27T12:37:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestUsers -->
-      </class> <!-- com.M61.NewTest -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.M52.Test.NewTest -->
     </test> <!-- Test -->
   </suite> <!-- FlightTest -->
 </testng-results>

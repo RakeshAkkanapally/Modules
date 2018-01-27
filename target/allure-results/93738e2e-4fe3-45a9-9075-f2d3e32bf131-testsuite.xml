@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1517034198409" stop="1517034220487" version="1.4.23" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ebay</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1517034198441" stop="1517034220371" status="passed">
+            <name>Search and Add to Cart</name>
+            <title>Search and Add to Cart</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1517034198461" stop="1517034202774" status="passed">
+                    <name>Given User launch the website "https://www.ebay.com/"</name>
+                    <title>Given User launch the website "https://www.ebay.com/"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517034202786" stop="1517034208660" status="passed">
+                    <name>Given User search for an item "nokia 6"</name>
+                    <title>Given User search for an item "nokia 6"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517034208660" stop="1517034213861" status="passed">
+                    <name>When User selects the First Item listed</name>
+                    <title>When User selects the First Item listed</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517034213861" stop="1517034220275" status="passed">
+                    <name>Then User adds the item to cart</name>
+                    <title>Then User adds the item to cart</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1517034220279" stop="1517034220371" status="passed">
+                    <name>And Verify Item is succesfully added to cart</name>
+                    <title>And Verify Item is succesfully added to cart</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search and Add to Cart"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="4276@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="ebay"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

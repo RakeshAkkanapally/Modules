@@ -54,14 +54,14 @@ public class NewTest {
 	  Assert.assertEquals(driver.getTitle(),"Official Ryanair website | Book direct for the lowest fares | Ryanair.com");
 	  
 	  HomePage HomePage=new HomePage(driver);
-	  HomePage.SelectFrom(driver, " Belgium");
-	  HomePage.SelectFromAirport(driver, "Brussels Charleroi");	 
-	  Assert.assertEquals(HomePage.getSelectedFromValue(driver), "Brussels Charleroi");
+	  HomePage.SelectFrom(" Belgium");
+	  HomePage.SelectFromAirport("Brussels Charleroi");	 
+	  Assert.assertEquals(HomePage.getSelectedFromValue(), "Brussels Charleroi");
   
 	 
-	  HomePage.SelectToCountry(driver, " United Kingdom");
-	  HomePage.SelectToAirport(driver, "Manchester");
-	  Assert.assertEquals(HomePage.getSelectedToValue(driver), "Manchester");
+	  HomePage.SelectToCountry(" United Kingdom");
+	  HomePage.SelectToAirport("Manchester");
+	  Assert.assertEquals(HomePage.getSelectedToValue(), "Manchester");
 	  
 	  //Mechanism to choose random dates 
 	  LocalDate startDate = LocalDate.of(java.time.LocalDateTime.now().getYear(), java.time.LocalDateTime.now().getMonthValue(), java.time.LocalDateTime.now().getDayOfMonth()); //start date
@@ -81,19 +81,19 @@ public class NewTest {
 	 String StartMonth=LocalDate.ofEpochDay(randomEpochDay).getMonth().name();
 	 String ToMonth=LocalDate.ofEpochDay(randomEpochDay2).getMonth().name();
 	 
-	 HomePage.SelectFromCalendar(driver, StartDate, StartMonth);
-	 HomePage.SelectFromCalendar(driver, ToDate,ToMonth);
+	 HomePage.SelectFromCalendar(StartDate, StartMonth);
+	 HomePage.SelectFromCalendar(ToDate,ToMonth);
 	 
-	 HomePage.AddTeen(driver);
-	 SearchResultPage SearchResultPage = HomePage.Search(driver);
-	 SearchResultPage.isFlightDisplayed(driver);
+	 HomePage.AddTeen();
+	 SearchResultPage SearchResultPage = HomePage.Search();
+	 SearchResultPage.isFlightDisplayed();
 	 
-	 String StartResultDate=SearchResultPage.StartResultDateText(driver).toLowerCase();
+	 String StartResultDate=SearchResultPage.StartResultDateText().toLowerCase();
 	 Assert.assertTrue(StartResultDate.toLowerCase().contains((StartDate+" "+StartMonth.substring(0,3)).toLowerCase()));
 	 
-	 String EndResultDate=SearchResultPage.EndResultDateText(driver).toLowerCase();
+	 String EndResultDate=SearchResultPage.EndResultDateText().toLowerCase();
 	 Assert.assertTrue(EndResultDate.toLowerCase().contains((ToDate+" "+ToMonth.substring(0,3)).toLowerCase()));
-	 SearchResultPage.PrintFlightDetails(driver);
+	 SearchResultPage.PrintFlightDetails();
 	 
 	 System.out.println("Test Execution Completed..");	  
   }

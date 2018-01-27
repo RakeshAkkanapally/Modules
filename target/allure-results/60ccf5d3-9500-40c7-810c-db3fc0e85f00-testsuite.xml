@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1517030691168" stop="1517030705097" version="1.4.23" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>ebay</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1517030691251" stop="1517030700750" status="broken">
+            <name>Search and Add to Cart</name>
+            <title>Search and Add to Cart</title>
+            <description type="text"></description>
+            <failure>
+                <message>CucumberException: Arity mismatch: Step Definition 'com.M63.steps.BaseStepDef.selectFirstListedItem(String) in file:/C:/Users/Rakesh/Learn/Eclipse_workspace/TAM2/target/test-classes/' with pattern [^user selects the First Item listed$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. 
+Step: When user selects the First Item listed</message>
+                <stack-trace>cucumber.runtime.CucumberException: Arity mismatch: Step Definition 'com.M63.steps.BaseStepDef.selectFirstListedItem(String) in file:/C:/Users/Rakesh/Learn/Eclipse_workspace/TAM2/target/test-classes/' with pattern [^user selects the First Item listed$] is declared with 1 parameters. However, the gherkin step has 0 arguments []. 
+Step: When user selects the First Item listed
+	at cucumber.runtime.StepDefinitionMatch.arityMismatch(StepDefinitionMatch.java:102)
+	at cucumber.runtime.StepDefinitionMatch.transformedArgs(StepDefinitionMatch.java:60)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:299)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1517030691266" stop="1517030695606" status="passed">
+                    <name>Given user launch the website "https://www.ebay.com/"</name>
+                    <title>Given user launch the website "https://www.ebay.com/"</title>
+                </step>
+                <step start="1517030695612" stop="1517030700682" status="passed">
+                    <name>Given user search for an item "IPHONE"</name>
+                    <title>Given user search for an item "IPHONE"</title>
+                </step>
+                <step start="1517030700682" stop="1517030700746" status="broken">
+                    <name>When user selects the First Item listed</name>
+                    <title>When user selects the First Item listed</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search and Add to Cart"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="1244@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1517030700778" stop="1517030703150" status="canceled">
+            <name>Search data driven</name>
+            <title>Search data driven</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1517030700782" stop="1517030703119" status="passed">
+                    <name>Given user launch the website "https://www.ebay.com/"</name>
+                    <title>Given user launch the website "https://www.ebay.com/"</title>
+                </step>
+                <step start="1517030703145" stop="1517030703147" status="canceled">
+                    <name>I set search request "Syma" and "Mac"</name>
+                    <title>I set search request "Syma" and "Mac"</title>
+                </step>
+                <step start="1517030703150" stop="1517030703150" status="canceled">
+                    <name>I perform search</name>
+                    <title>I perform search</title>
+                </step>
+                <step start="1517030703150" stop="1517030703150" status="canceled">
+                    <name>the term query "Syma" should be the first in the Search Result grid</name>
+                    <title>the term query "Syma" should be the first in the Search Result grid</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search data driven"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="1244@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1517030703150" stop="1517030705095" status="canceled">
+            <name>Search data driven</name>
+            <title>Search data driven</title>
+            <description type="text"></description>
+            <failure>
+                <message>Unimplemented steps were found</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps>
+                <step start="1517030703150" stop="1517030705079" status="passed">
+                    <name>Given user launch the website "https://www.ebay.com/"</name>
+                    <title>Given user launch the website "https://www.ebay.com/"</title>
+                </step>
+                <step start="1517030705095" stop="1517030705095" status="canceled">
+                    <name>I set search request "Mac" and "Syma"</name>
+                    <title>I set search request "Mac" and "Syma"</title>
+                </step>
+                <step start="1517030705095" stop="1517030705095" status="canceled">
+                    <name>I perform search</name>
+                    <title>I perform search</title>
+                </step>
+                <step start="1517030705095" stop="1517030705095" status="canceled">
+                    <name>the term query "Mac" should be the first in the Search Result grid</name>
+                    <title>the term query "Mac" should be the first in the Search Result grid</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Search data driven"/>
+                <label name="feature" value="ebay"/>
+                <label name="host" value="RakeshPC"/>
+                <label name="thread" value="1244@RakeshPC.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="ebay"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
