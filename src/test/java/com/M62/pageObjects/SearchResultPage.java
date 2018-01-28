@@ -1,4 +1,4 @@
-package com.M52.PageObjects;
+package com.M62.pageObjects;
 
 import java.util.List;
 import java.util.ListIterator;
@@ -14,12 +14,13 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SearchResultPage {
-	
-	SearchResultPage SearchResultPage;
-	WebDriver driver;
+import com.M62.util.Flight;
+import com.M62.util.FlightDetails;
 
+public class SearchResultPage{
 	
+	WebDriver driver;
+		
 	@FindBy(how=How.XPATH,using="(//div[@class='slide active']/div/div[@class='date'])[1]")
 	private WebElement StartResultDateElement;
 	
@@ -58,7 +59,7 @@ public class SearchResultPage {
 	}
 
 	public SearchResultPage isFlightDisplayed() {
-		boolean FlightDisplayed= (new WebDriverWait(driver, 10)).until(
+		boolean FlightDisplayed= (new WebDriverWait(driver, 20)).until(
 				 new ExpectedCondition<Boolean>(){
 					 public Boolean apply(WebDriver d){
 						 try {
@@ -85,13 +86,17 @@ public class SearchResultPage {
 	}
 
 	public String EndResultDateText() {
-		//((JavascriptExecutor)driver).executeScript("window.scrollBy(0,250)");
+		((JavascriptExecutor)driver).executeScript("window.scrollBy(0,250)");
 		 EndResultDateElement = (new WebDriverWait(driver,10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@class='slide active']/div/div[@class='date'])[2]")));
 
 		return EndResultDateElement.getText();
 	}
 
 	public SearchResultPage PrintFlightDetails() {
+		Flight ToFlight=new Flight();
+		Flight ReturnFlight=new Flight();
+		ToFlight.setType("Departure");
+		ReturnFlight.setType("Arrival");
 		 if(Flights.size()>=1){
 			 ListIterator<WebElement> itr1 = Departure_StartTime.listIterator();
 			 ListIterator<WebElement> itr2 = Departure_EndTime.listIterator();
@@ -100,10 +105,13 @@ public class SearchResultPage {
 
 			 System.out.println("\nTo Flight");
 			 while (itr1.hasNext()) {
-				System.out.println("\nFlight Number:"+itr3.next().getText());
-				System.out.print("\tStart Time:"+itr1.next().getText());
-				System.out.print("\tEnd Time:"+itr2.next().getText());
-				System.out.print("\tFlightTime:"+itr4.next().getText());
+				 FlightDetails ToFlightDetails=new FlightDetails();
+				 ToFlightDetails.setFlightNumber(itr3.next().getText());
+				 ToFlightDetails.setFlightStartTime(itr1.next().getText());
+				 ToFlightDetails.setFlightEndTime(itr2.next().getText());
+				 ToFlightDetails.setFlightTime(itr4.next().getText());
+				 
+				 ToFlight.addFlights(ToFlightDetails);
 
 			 }
 			 
@@ -115,19 +123,42 @@ public class SearchResultPage {
 			 ListIterator<WebElement> itr2 = Arriving_EndTime.listIterator();
 			 ListIterator<WebElement> itr3 = Arriving_FlightNumber.listIterator();
 			 ListIterator<WebElement> itr4 = Arriving_FlightTime.listIterator();
-
-			 System.out.println("\nReturn Flight");
+			 
 			 while (itr1.hasNext()) {
-				System.out.println("\nFlight Number:"+itr3.next().getText());
-				System.out.print("\tStart Time:"+itr1.next().getText());
-				System.out.print("\tEnd Time:"+itr2.next().getText());
-				System.out.print("\tFlightTime:"+itr4.next().getText());
+				 FlightDetails ReturnFlightDetails=new FlightDetails();
+				 ReturnFlightDetails.setFlightNumber(itr3.next().getText());
+				 ReturnFlightDetails.setFlightStartTime(itr1.next().getText());
+				 ReturnFlightDetails.setFlightEndTime(itr2.next().getText());
+				 ReturnFlightDetails.setFlightTime(itr4.next().getText());
+				 
+				 ReturnFlight.addFlights(ReturnFlightDetails);
 
 			 }
 			 		 
 		 }else{
 			 System.out.println("No Return Flights Available");
 		 }
+		 
+		 System.out.println(ToFlight.getType());
+		 for(int i=0;i<ToFlight.getFlights().size();i++){
+			 System.out.println("\nFlight:"+(i+1));
+			 System.out.println("\t"+ToFlight.getFlights().get(i).getFlightNumber());
+			 System.out.print("\t"+ToFlight.getFlights().get(i).getFlightStartTime());
+			 System.out.print("\t"+ToFlight.getFlights().get(i).getFlightEndTime());
+			 System.out.print("\t"+ToFlight.getFlights().get(i).getFlightTime());
+			 
+		 }
+		 System.out.println("\n"+ReturnFlight.getType());
+		 for(int i=0;i<ReturnFlight.getFlights().size();i++){
+			 System.out.println("\nFlight:"+(i+1));
+			 System.out.println("\t"+ReturnFlight.getFlights().get(i).getFlightNumber());
+			 System.out.print("\t"+ReturnFlight.getFlights().get(i).getFlightStartTime());
+			 System.out.print("\t"+ReturnFlight.getFlights().get(i).getFlightEndTime());
+			 System.out.print("\t"+ReturnFlight.getFlights().get(i).getFlightTime());
+			 
+		 }
+		 
+		 
 		return this;		
 	}
 	
